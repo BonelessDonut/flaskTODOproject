@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo App</title>
+        <!--Documentation for Semantic UI stylesheet here https://semantic-ui.com/introduction/getting-started.html-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    </head>
+    <body>
+
+        <div style="margin-top: 50px;" class="ui container">
+        <h1 class="ui center aligned header">Todo App</h1>
+
+
+        <div class="ui middle aligned center aligned grid">
+            <div class="column">
+                <form class="ui large form" action="" method="post">
+                    <div class="ui stacked segment">
+                        <div class="field">
+                            {{ form.hidden_tag() }}
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                {{ form.username }}
+                            </div>
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                {{ form.password }}
+                            </div>
+                        </div>
+                        <button class="ui teal button">Sign Up</button>
+                    </div>
+                    <div class="ui error message"></div>
+                </form>
+                <div class="ui message" style="margin:15px;">
+                    Already have an account?
+                    <a href="/login">Login</a>
+                    or continue
+                    <a href="/">without an account</a>
+                </div>
+            </div>
+        </div>
+
+        
+        </div>
+    </body>
+</html>
